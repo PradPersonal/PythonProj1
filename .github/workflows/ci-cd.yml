@@ -31,7 +31,8 @@ jobs:
       - name: Run tests with pytest
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: pytest
+        run: |
+          python -m pytest my_app/tests/
 
       - name: Build application (e.g., create a distributable)
         run: |
