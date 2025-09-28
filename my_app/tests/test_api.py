@@ -1,5 +1,5 @@
 import pytest
-from app import app as flask_app  # Assuming your Flask app instance is named 'app' in app.py
+from my_app.app import app as flask_app
 import json
 
 @pytest.fixture
