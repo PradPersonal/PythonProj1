@@ -37,6 +37,9 @@ jobs:
       - name: Build application (e.g., create a distributable)
         run: |
           echo "Simulating a build step..."
+          # Create a dummy directory and file for the artifact
+          mkdir -p dist
+          echo "build-details: ${{ github.sha }}" > dist/build.txt
           # Replace this with your actual build command, like building a Docker image or wheel.
           # For example, to build a source distribution:
           # python setup.py sdist
