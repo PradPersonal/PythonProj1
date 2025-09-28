@@ -29,6 +29,8 @@ jobs:
           pip install pytest # Assuming pytest is not in requirements.txt
 
       - name: Run tests with pytest
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest
 
       - name: Build application (e.g., create a distributable)
